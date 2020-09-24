@@ -1,4 +1,7 @@
 # README
+## License
+All source code in this project is available under the MIT license.See [LICENSE.md](LICENSE.md) for details.
+
 ## General Info
 * Ruby version
   * Currently running on ruby 2.56p201
