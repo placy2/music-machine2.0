@@ -387,11 +387,61 @@ const cMajor = function() {
     playNote('C', 5);
 };
 
-const playSong = function() {
+const playChords1 = function() {
     setTimeout(gSeven, 500);
     setTimeout(cMajor, 1800);
 };
 
+// Testing A minor progression:
+// i -> iv6/4 -> vii -> III6/4 -> VI -> III6
+
+const aMinor = function() {
+    playNote('A', 3);
+    playNote('C', 4);
+    playNote('E', 4);
+}
+
+const dMinor64 = function() {
+    playNote('A', 3);
+    playNote('D', 4);
+    playNote('F', 4);
+}
+
+const gMinor = function() {
+    playNote('G', 3);
+    playNote('B', 3);
+    playNote('D', 4);
+}
+
+const cMajor64 = function() {
+    playNote('G', 3);
+    playNote('C', 4);
+    playNote('E', 4);
+}
+
+const fMajor = function() {
+    playNote('F', 3);
+    playNote('A', 3);
+    playNote('C', 4);
+}
+
+const cMajor6 = function() {
+    playNote('E', 3);
+    playNote('G', 3);
+    playNote('C', 4);
+}
+
+const playChords2 = function() {
+    setTimeout(aMinor, 500);
+    setTimeout(dMinor64, 1500);
+    setTimeout(gMinor, 2500);
+    setTimeout(cMajor64, 3500);
+    setTimeout(fMajor, 4500);
+    setTimeout(cMajor6, 5500);
+    setTimeout(cMajor6, 6500);
+}
+
 window.onload = function(){
-	document.getElementById("chordButton").onclick = () => playSong();
+    document.getElementById("btnChords1").onclick = () => playChords1();
+    document.getElementById("btnChords2").onclick = () => playChords2();
 }
