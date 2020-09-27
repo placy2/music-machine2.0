@@ -15,3 +15,11 @@ To get started with the app, clone the repo and then install the needed gems:
 ```
 $ bundle install --without production
 ```
+
+Then, from the project directory, run:
+
+```
+$ rails server
+```
+
+The application can then be accessed at localhost:3000.
