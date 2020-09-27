@@ -1,3 +1,9 @@
+//"use strict"
+
+/*  NOTE:
+      This file contains keithwhor's audiosynth code (lines 7-356).
+      The license and README for this code can be found in the same folder as this javascript file. */
+
 var Synth, AudioSynth, AudioSynthInstrument;
 !function(){
 
@@ -348,3 +354,44 @@ Synth.loadSoundProfile({
 		);
 	}
 });
+
+// ==================================================================================================
+// Code below written by Parker Lacy
+
+let a = new AudioSynth();
+a.setVolume(0.5);
+
+const playNote = function(note, octave) {
+    let src = a.generate(0, note, octave, 2);
+    let container = new Audio(src);
+    container.addEventListener('ended', function() { container = null; });
+    container.autoplay = false;
+    container.addEventListener('loadeddata', function(e) { e.target.play(); });
+    container.setAttribute('type', 'audio/wav');
+    container.load();
+    return container;
+};
+
+const gSeven = function() {
+    playNote('D', 3);
+    playNote('G', 3);
+    playNote('B', 3);
+    playNote('F', 5);
+};
+
+
+const cMajor = function() {
+    playNote('C', 3);
+    playNote('E', 3);
+    playNote('G', 3);
+    playNote('C', 5);
+};
+
+const playSong = function() {
+    setTimeout(gSeven, 500);
+    setTimeout(cMajor, 1800);
+};
+
+window.onload = function(){
+	document.getElementById("chordButton").onclick = () => playSong();
+}
