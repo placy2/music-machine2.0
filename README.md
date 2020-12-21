@@ -17,7 +17,11 @@ $ bundle install --without production
 ```
 
 Then, from the project directory, run:
+```
+$ bin/webpacker
+```
 
+Followed by:
 ```
 $ rails server
 ```
