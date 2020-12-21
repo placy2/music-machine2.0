@@ -23,3 +23,16 @@ $ rails server
 ```
 
 The application can then be accessed at localhost:3000.
+
+
+### TODO:
+
+* React
+  * ~~Integrate React & move homepage to new architecture while preserving functionality~~
+  * Set up hot reloading
+  * Add audiosynth calls to React component
+  * Establish a basic component hierarchy/structure for main application
+* General
+  * ~~Play sounds/chords via buttons triggering Javascript (audiosynth by keithwhor)~~
+  * Integrate CSS library (Bootstrap, Flexbox, Material? More research required to match needs)
+  * Trim down unnecessary scaffolding code & streamline Webpacker loading
